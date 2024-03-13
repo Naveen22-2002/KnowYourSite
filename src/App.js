@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Body from './components/main/Body';
+import Header from './components/main/Header';
+import MostVisitedCourses from './components/main/MostVisitedCourses';
+import Course from './components/main/Course';
+import AboutUs from './components/main/About';
+import ContactUs from './components/main/ContactUs';
 
 function App() {
+  const [showCourses, setShowCourses] = useState(false);
+  const [showMostVisitedCourses, setShowMostVisitedCourses] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header setShowCourses={setShowCourses} setShowMostVisitedCourses={setShowMostVisitedCourses} />
+      <Body setShowCourses={setShowCourses} setShowMostVisitedCourses={setShowMostVisitedCourses} />
+      {showCourses && !showMostVisitedCourses && <Course />}
+      {showMostVisitedCourses && <MostVisitedCourses />}
+      <AboutUs />
+      <ContactUs />
     </div>
   );
 }
