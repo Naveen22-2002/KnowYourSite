@@ -1,8 +1,9 @@
 import React from 'react';
 import './CourseComponent.css';
-const CourseComponent = ({ title, imageUrl, description, priority }) => {
+
+const CourseComponent = ({ title, imageUrl, description, priority, onClick }) => {
   return (
-    <div className="course-card">
+    <div className="course-card" onClick={onClick}>
       <img src={imageUrl} alt={title} className="course-image" />
       <div className="course-details">
         <h3>{title}</h3>

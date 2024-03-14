@@ -6,6 +6,7 @@ import MostVisitedCourses from './components/main/MostVisitedCourses';
 import Course from './components/main/Course';
 import AboutUs from './components/main/About';
 import ContactUs from './components/main/ContactUs';
+import CourseItem from './components/main/CourseItem';
 
 function App() {
   const [showCourses, setShowCourses] = useState(false);
@@ -19,6 +20,7 @@ function App() {
       {showMostVisitedCourses && <MostVisitedCourses />}
       <AboutUs />
       <ContactUs />
+      <CourseItem />
     </div>
   );
 }
