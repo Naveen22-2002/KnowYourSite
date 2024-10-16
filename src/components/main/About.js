@@ -3,8 +3,7 @@ import React from 'react';
 import './AboutUs.css'; // Import CSS file for styling
 
 // Functional component for About Us page
-const AboutUs = () => {
-  return (
+
     <div className="about-us-container">
       <h1>About Us</h1>
       <p>Welcome to Know Your Site, where we help you find the best way to learn your courses!</p>
